@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+.container {
+    /*display: flex;*/
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/*шапка*/
+header{
+    font-family: "Courier New", fantasy;
+    background-color: #DDD7D7;
+    background-size: 50px 50px;
+    background-image:
+            linear-gradient(-45deg, transparent 52%, rgba(255,255,255,0.9) 54%, transparent 55%, transparent),
+            linear-gradient(45deg, transparent 52%, rgba(255,255,255,0.6) 54%, transparent 55%, transparent),
+            linear-gradient(-45deg, transparent 50%, rgba(0,0,0,0.1) 52%, transparent 53%, transparent),
+            linear-gradient(45deg, transparent 50%, rgba(0,0,0,0.05) 52%, transparent 53%, transparent);
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+}
+
+.right {
+    float: right;
+    font-weight: bold;
+    margin: 0 4px 0 0;
+}
+
+/*основное*/
+section {
+    font-family: "Courier New", "Nimbus Mono L" , monospace;
+    margin: 0;
+    left: 0;
+    top: 0;
+    /*display: flex;*/
+}
+
+.content-container {
+    display: flex;
+}
+
+.block{
+    background: radial-gradient(circle, white, #DDD7D7);
+    margin: 15px;
+    padding: 10px;
+    width: auto;
+    align-items: center;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+
+button{
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-size: large;
+    margin: 2rem;
+}
+
+button:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+}
+
+button:active {
+    background: rgb(240, 240, 240);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .4);
+}
+
+.region {
+    border-radius: 1rem;
+    border: 1px outset #999975;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+#yInput, #radiusInput {
+    background: radial-gradient(ellipse, white, #DDD7D7);
+}
+
+.graph {
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: white;
+    border: 1px outset #999975;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+
+iframe {
+    height: 200px;
+    width: 100%;
+    margin: 0 20px;
+    background: radial-gradient(ellipse, white, #DDD7D7);
+
+}
+
+@media (max-width: 1080px) {
+    .container {
+        width: 500px;
+    }
+
+    .graph {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 550px;
+    }
+
+    .graph {
+        width: 350px;
+        height: 350px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        display: flex;
+    }
+
+    .graph {
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+    }
+
+}
+
+

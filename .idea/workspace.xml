@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b937fdb0-aee3-42ab-a8f3-1d26418f5aa6" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="D:/System/xammp/php" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1Oub2PhlQ0KJv7C29pvz06jLWhu" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/System/xammp/php/php.exe" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\my\IFMO\пип\lab1" />
+      <recent name="D:\my\IFMO\пип\lab1\localhost" />
+      <recent name="D:\my\IFMO\пип\lab1\265061" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\my\IFMO\пип\lab1" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b937fdb0-aee3-42ab-a8f3-1d26418f5aa6" name="Default Changelist" comment="" />
+      <created>1564830220690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564830220690</updated>
+      <workItem from="1564830221878" duration="7840000" />
+      <workItem from="1564840369364" duration="2605000" />
+      <workItem from="1564855262476" duration="11769000" />
+      <workItem from="1564935724744" duration="3568000" />
+      <workItem from="1565434832071" duration="1875000" />
+      <workItem from="1565781066979" duration="10377000" />
+      <workItem from="1565951468554" duration="433000" />
+      <workItem from="1565969011110" duration="3956000" />
+      <workItem from="1565974415525" duration="1527000" />
+      <workItem from="1565976290599" duration="348000" />
+      <workItem from="1565999705567" duration="13052000" />
+      <workItem from="1566046690812" duration="310000" />
+      <workItem from="1566047037925" duration="165000" />
+      <workItem from="1566047218006" duration="208000" />
+      <workItem from="1566047440134" duration="150000" />
+      <workItem from="1566047608708" duration="153000" />
+      <workItem from="1566157594784" duration="1730000" />
+      <workItem from="1566159383102" duration="358000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
+        <item name="lab1" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+</project>

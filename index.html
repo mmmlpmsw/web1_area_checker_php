@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="stylesheet.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Хорошее начало не мелочь, хоть начинается с мелочи.</title>
+</head>
+<body>
+    <header>
+            <div class="header-info container">
+                <ul>
+                    <li class="info"> Наумова Н.А, P3201</li>
+                    <li class="info right">Вариант 201015</li>
+                </ul>
+
+            </div>
+    </header>
+
+    <section>
+        <div class="content-container container">
+            <svg class="graph" viewBox="0 0 1000 1000">
+
+                <path d="M 300 500
+                            l 0 400 200 0 0 -200 400 -200 -400 0 0 -200 z
+                            A 200 200 0 0 1 500 300
+                            l -200 200"
+                      fill="lightskyblue" stroke-width="2" > </path>
+
+                <path d=" M 0 500
+                            l 1000 0 -25 -15
+                            m 25 15
+                            l -25 15
+                            M 100 490 l 0 20
+                            M 300 490 l 0 20
+                            M 700 490 l 0 20
+                            M 900 490 l 0 20
+
+                            M 500 1000
+                            l 0 -1000 -15 30
+                            m 15 -30
+                            l 15 30
+                            M 490 900 l 20 0
+                            M 490 700 l 20 0
+                            M 490 300 l 20 0
+                            M 490 100 l 20 0" stroke="black" fill="transparent" stroke-width="1"> </path>
+
+                <text x="8%" y="47.5%" font-size="45" class="graph-text">-R</text>
+                <text x="24%" y="47.5%" font-size="45" class="graph-text">-R/2</text>
+                <text x="66%" y="47.5%" font-size="45" class="graph-text">R/2</text>
+                <text x="89%" y="47.5%" font-size="45" class="graph-text">R</text>
+                <text x="52%" y="91.5%" font-size="45" class="graph-text">-R</text>
+                <text x="52%" y="71.5%" font-size="45" class="graph-text">-R/2</text>
+                <text x="52%" y="31.5%" font-size="45" class="graph-text">R/2</text>
+                <text x="52%" y="11.5%" font-size="45" class="graph-text">R</text>
+
+                <text x="46.5%" y="54%" font-size="45" class="graph-text">0</text>
+                <text x="97.5%" y="54.5%" font-size="40" class="graph-view__text-x">x</text>
+                <text x="45%" y="2%" font-size="40" class="graph-view__text-x">y</text>
+
+            </svg>
+
+            <div class="control-points">
+                <script src="script.js"></script>
+                <form method="GET" onsubmit="return validate(this);"
+                      action="check.php" target="answer">
+                    <div class="block region" id="xInput">
+                        <p class="title" ><label title="X"> Значение X </label></p>
+                        <input type="checkbox" name="x" value="-2.0" id="-2.0">-2<br>
+                        <input type="checkbox" name="x" value="-1.5" id="-1.5">-1.5<br>
+                        <input type="checkbox" name="x" value="-1.0" id="-1.0">-1<br>
+                        <input type="checkbox" name="x" value="-0.5" id="-0.5">-0.5<br>
+                        <input type="checkbox" name="x" value="0.0" id="0.0">0<br>
+                        <input type="checkbox" name="x" value="0.5" id="0.5">0.5<br>
+                        <input type="checkbox" name="x" value="1.0" id="1.0">1<br>
+                        <input type="checkbox" name="x" value="1.5" id="1.5">1.5<br>
+                        <input type="checkbox" name="x" value="2.0" id="2.0">2<br>
+
+                    </div>
+
+                    <div class="block region" id="yInput">
+                        <p class="title"><label for="Y"> Значение Y  </label></p>
+                        <p><input class="input_Y" id="y" type="text" name="y" placeholder="[-5 .. 3]"><br></p>
+                    </div>
+
+                    <div class="block region" id="radiusInput">
+                        <p class="title"><label  for="R"> Значение R  </label></p>
+                        <p><input class="input_R" id="r" type="text" name="r" placeholder="[1 .. 4]"><br></p>
+                    </div>
+
+                    <button class="region" type="submit">IMMA_CHARGIN_MAH_LAZER</button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <iframe class="region" name="answer" id="answer"></iframe>
+        </div>
+
+
+    </section>
+
+</body>
+</html>
