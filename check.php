@@ -10,11 +10,12 @@
 <?php
 
 if (session_id()==="") session_start();
+
 $start = microtime(true);
 date_default_timezone_set("UTC");
 
 $currentTime = time() + 3 * 3600;
-echo "<p align='center' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>";
+echo "<p align='left' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>"; //todo
 
 $x = (float)$_GET["x"];
 $y = (float)$_GET["y"];
@@ -37,15 +38,15 @@ if (!isset($_SESSION['responses'])) $_SESSION['responses']=array();
 $response = new Response($x, $y, $r, $currentTime);
 array_push($_SESSION['responses'],$response);
 
-echo "<p align='center'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>";
+echo "<p align='left'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>"; //todo
 
 $time=(float)round(microtime(true)-$start,4);
-if ($time==0) $time='Менее 0.0001';
-echo "<p align='center'>Время проверки: ".$time." сек.</p>";
+if ($time==0) $time='Менее 0.0001 c';
+echo "<p align='left'>Время проверки: ".$time." сек.</p>"; //todo
 
 $response->setTime($time);
 echo
-"<table  align='center'  >
+"<table  align='right'  > 
 <thead>
 <tr >
 <th> <h5>Х</h5></th>
@@ -53,19 +54,20 @@ echo
 <th> <h5>R</h5></th>
 <th> <h5>Текущее время</h5></th>
 <th> <h5>Время проверки</h5></th>
-<th> <h5>Попала?</h5></th>
+<th> <h5>Результат</h5></th>
 
 </tr>
 </thead>";
 
 foreach (array_reverse($_SESSION['responses']) as $i=>$response){
+    $t = date("H:i:s", $response->currentTime);
     echo "<tr>
-<td align='center'>$response->x</td>
- <td align='center'>$response->y</td>
- <td align='center'>$response->r</td>
- <td align='center'>$response->currentTime</td>
-  <td align='center'>$response->time</td> ";
-    echo $response->check_area()? "<td>Да </td> </tr>" : "<td>Нет</td> </tr>";
+<td>$response->x</td>
+<td>$response->y</td>
+<td>$response->r</td>
+<td>$t</td>
+<td>$response->time</td> ";
+    echo $response->check_area()? "<td>yes </td> </tr>" : "<td>no</td> </tr>";
 
 }
 if (count($_SESSION['responses'])>=10) array_shift($_SESSION['responses']);
@@ -95,7 +97,12 @@ class Response{
     }
 
     function check_area(){
-        return true;
+        if ((($this->x <= 0) && ($this->y >= 0) && (($this->x * $this->x + $this->y * $this->y) <= 0.5 * $this->r)) ||  /*II четверть*/
+                (($this->x >= 0) && ($this->y <= 0) && ($this->y >= (0.5 * ($this->x - $this->r)))) ||                  /*IV четверть*/
+                (($this->x <= 0) && ($this->x >= 0.5 * $this->r) && ($this->y <= 0) && ($this->y >= $this->r)))         /*III четверть*/
+            return true;
+        else
+            return false;
     }
 }
 ?>
