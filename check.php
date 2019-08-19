@@ -15,7 +15,7 @@ $start = microtime(true);
 date_default_timezone_set("UTC");
 
 $currentTime = time() + 3 * 3600;
-echo "<p align='left' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>"; //todo
+echo "<p align='center' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>";
 
 $x = (float)$_GET["x"];
 $y = (float)$_GET["y"];
@@ -38,15 +38,15 @@ if (!isset($_SESSION['responses'])) $_SESSION['responses']=array();
 $response = new Response($x, $y, $r, $currentTime);
 array_push($_SESSION['responses'],$response);
 
-echo "<p align='left'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>"; //todo
+echo "<p align='center'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>";
 
 $time=(float)round(microtime(true)-$start,4);
 if ($time==0) $time='Менее 0.0001 c';
-echo "<p align='left'>Время проверки: ".$time." сек.</p>"; //todo
+echo "<p align='center'>Время проверки: ".$time." сек.</p>";
 
 $response->setTime($time);
 echo
-"<table  align='right'  > 
+"<table  align='left'  >
 <thead>
 <tr >
 <th> <h5>Х</h5></th>
