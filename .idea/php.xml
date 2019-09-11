@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PhpIncludePathManager">
     <include_path>
-      <path value="D:/System/xammp/php" />
+      <path value="D:/System/php-devel-pack-7.3.9-Win32-VC15-x64/php-7.3.9-devel-VC15-x64/include/main'" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

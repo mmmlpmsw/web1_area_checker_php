@@ -8,13 +8,9 @@
 </head>
 <body>
     <header>
-            <div class="header-info container">
-                <ul>
-                    <li class="info"> Наумова Н.А, P3201</li>
-                    <li class="info right">Вариант 201015</li>
-                </ul>
-
-            </div>
+                    <p class="info left"> Наумова Н.А, P3201</p>
+                    <p class="info right">Вариант 201015</p>
+                    <div style="clear: left"></div>
     </header>
 
     <section>
@@ -23,8 +19,8 @@
 
                 <path d="M 300 500
                             l 0 400 200 0 0 -200 400 -200 -400 0 0 -200 z
-                            A 200 200 0 0 1 500 300
-                            l -200 200"
+                            A 200 200 0 0 1 500 300 z
+                           "
                       fill="lightskyblue" stroke-width="2" > </path>
 
                 <path d=" M 0 500
@@ -59,11 +55,10 @@
                 <text x="45%" y="2%" font-size="40" class="graph-view__text-x">y</text>
 
             </svg>
-
+            <form method="GET" action="check.php" target="_blank">
             <div class="control-points">
-                <script src="script.js"></script>
-                <form method="GET" onsubmit="return validate(this);"
-                      action="check.php" target="answer">
+
+<!--                      onsubmit="return validate(this);"-->
                     <div class="block region" id="xInput">
                         <p class="title" ><label title="X"> Значение X </label></p>
                         <input type="checkbox" name="x" value="-2.0" id="-2.0">-2<br>
@@ -80,24 +75,29 @@
 
                     <div class="block region" id="yInput">
                         <p class="title"><label for="Y"> Значение Y  </label></p>
-                        <p><input class="input_Y" id="y" type="text" name="y" placeholder="[-5 .. 3]"><br></p>
+                        <p><input class="input_Y" id="y" type="text" name="y" placeholder="(-5 .. 3)"><br></p>
                     </div>
 
                     <div class="block region" id="radiusInput">
                         <p class="title"><label  for="R"> Значение R  </label></p>
-                        <p><input class="input_R" id="r" type="text" name="r" placeholder="[1 .. 4]"><br></p>
+                        <p><input class="input_R" id="r" type="text" name="r" placeholder="(1 .. 4)"><br></p>
                     </div>
 
-                    <button class="region" type="submit">IMMA_CHARGIN_MAH_LAZER</button>
-                </form>
+                    <div class="block invisible" id="errors-area">
+
+                    </div>
+
             </div>
-        </div>
-        <div class="container">
-            <iframe class="region" name="answer" id="answer"></iframe>
+                    <button class="region" type="submit" id="submit-button">IMMA_CHARGIN_MAH_LAZER</button>
+
+
+            </form>
         </div>
 
 
     </section>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

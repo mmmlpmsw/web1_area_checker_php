@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b937fdb0-aee3-42ab-a8f3-1d26418f5aa6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +36,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
-      <path value="D:/System/xammp/php" />
+      <path value="D:/System/php-devel-pack-7.3.9-Win32-VC15-x64/php-7.3.9-devel-VC15-x64/include/main'" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Oub2PhlQ0KJv7C29pvz06jLWhu" />
@@ -44,7 +51,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/System/xammp/php/php.exe" />
+    <property name="last_opened_file_path" value="D:/System/php-devel-pack-7.3.9-Win32-VC15-x64/php-7.3.9-devel-VC15-x64/include/TSRM" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -83,6 +90,9 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="script" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings>
@@ -205,7 +215,13 @@
       <workItem from="1566157594784" duration="1730000" />
       <workItem from="1566159383102" duration="2064000" />
       <workItem from="1566216610444" duration="336000" />
-      <workItem from="1566217004653" duration="5069000" />
+      <workItem from="1566217004653" duration="11096000" />
+      <workItem from="1567287729433" duration="2017000" />
+      <workItem from="1568059839743" duration="3035000" />
+      <workItem from="1568062981679" duration="7494000" />
+      <workItem from="1568116462062" duration="2470000" />
+      <workItem from="1568124126526" duration="8443000" />
+      <workItem from="1568237487882" duration="2622000" />
     </task>
     <servers />
   </component>

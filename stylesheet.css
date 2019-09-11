@@ -26,25 +26,19 @@ header{
     margin: 0;
     left: 0;
     top: 0;
+    position: fixed;
     width: 100%;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.left, .right {
+    float: left;
+    width: 50%;
 }
 
-.info {
-    display: inline-block;
-    margin: 2px;
-    padding: 2px;
-}
 
 .right {
-    float: right;
     font-weight: bold;
-    margin: 0 4px 0 0;
+    text-align: right;
 }
 
 /*основное*/
@@ -56,8 +50,16 @@ section {
     /*display: flex;*/
 }
 
+.control-points {
+    background-color: #f9f3f3;
+    margin-top: 10px;
+    border: 1px outset #d6d6b1;
+    border-radius: 5px;
+}
+
 .content-container {
     display: flex;
+    padding-top: 100px;
 }
 
 .block{
@@ -86,7 +88,7 @@ button:active {
 }
 
 .region {
-    border-radius: 1rem;
+    border-radius: 10px;
     border: 1px outset #999975;
 }
 
@@ -112,27 +114,36 @@ button:active {
 }
 
 iframe {
-    height: 200px;
-    width: 100%;
+    height: 400px;
+    width: 90%;
     margin: 0 20px;
     background: radial-gradient(ellipse, white, #DDD7D7);
 
 }
 
+h2 {
+    font-size: 1.2rem;
+}
+
 table {
     border-collapse: collapse;
     text-align: center;
+    float: right;
 }
 
 th, td {
     border-style: solid;
-    border-width: 0 1px 1px 0;
+    border-width: 1px 1px 1px 1px;
     border-color: black;
     padding: 5px 10px;
 }
 
-th:first-child {
-    border-top-left-radius: 10px;
+.invisible {
+    display: none;
+}
+
+#answer {
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
 
 @media (max-width: 1080px) {
@@ -157,19 +168,3 @@ th:first-child {
         margin: 20px;
     }
 }
-
-@media (max-width: 480px) {
-    .container {
-        width: 100%;
-        display: flex;
-    }
-
-    .graph {
-        width: 250px;
-        height: 250px;
-        margin: 20px;
-    }
-
-}
-
-
