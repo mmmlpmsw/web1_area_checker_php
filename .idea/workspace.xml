@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b937fdb0-aee3-42ab-a8f3-1d26418f5aa6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/check.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,13 +64,13 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\my\IFMO\пип\lab1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\my\IFMO\пип\lab1" />
       <recent name="D:\my\IFMO\пип\lab1\localhost" />
       <recent name="D:\my\IFMO\пип\lab1\265061" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\my\IFMO\пип\lab1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -221,7 +217,7 @@
       <workItem from="1568062981679" duration="7494000" />
       <workItem from="1568116462062" duration="2470000" />
       <workItem from="1568124126526" duration="8443000" />
-      <workItem from="1568237487882" duration="2622000" />
+      <workItem from="1568237487882" duration="6326000" />
     </task>
     <servers />
   </component>
