@@ -11,8 +11,6 @@ body {
     flex-wrap: wrap;
 }
 
-
-/*шапка*/
 header{
     font-family: "Courier New", fantasy;
     background-color: #DDD7D7;
@@ -46,7 +44,6 @@ section {
     margin: 0;
     left: 0;
     top: 0;
-    /*display: flex;*/
 }
 
 .control-points {
@@ -59,6 +56,7 @@ section {
 .content-container {
     display: flex;
     padding-top: 100px;
+    flex-direction: row-reverse;
 }
 
 .block{
@@ -100,12 +98,6 @@ button:active {
     height: 200px;
 }
 
-table.main {
-    text-align: left;
-    border-collapse: collapse;
-    border: 2px solid transparent;
-}
-
 #yInput, #radiusInput {
     background: radial-gradient(ellipse, white, #DDD7D7);
 }
@@ -127,22 +119,23 @@ input {
     margin: 0.1%;
 }
 
-h2 {
-    font-size: 1.2rem;
-}
-
 table {
     border-collapse: collapse;
     text-align: center;
     float: right;
 }
 
-
 th, td {
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     border-color: black;
     padding: 5px 10px;
+}
+
+table.main {
+    text-align: left;
+    border-collapse: collapse;
+    border: 2px solid transparent;
 }
 
 table.main>th, td {
@@ -153,13 +146,13 @@ table.main>th, td {
     display: none;
 }
 
-#answer {
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+#responsesTable td, th{
+    border: 2px solid #9b9b7d;
 }
 
 @media (max-width: 1080px) {
     .container {
-        width: 500px;
+        width: 700px;
     }
 
     .graph {

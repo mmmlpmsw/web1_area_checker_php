@@ -18,10 +18,12 @@ $currentTime = time() + 3 * 3600;
 
 $x = (float)$_GET["x"];
 $yStr = (string)$_GET["y"];
-str_replace(",", ".", $yStr);
-$y = (float)$yStr;
-$r = (float)$_GET["r"];
+$a = str_replace(",", ".", $yStr);
+$y = (float)$a;
 
+$rStr = (string)$_GET["r"];
+$b = str_replace(",", ".", $rStr);
+$r = (float)$b;
 
 if ($_GET["y"] == "-0" || $_GET["y"] == "-0.0" || $_GET["y"] == "-0.00") $y = (float)0.0;
 if ($_GET["r"] == "-0" || $_GET["r"] == "-0.0" || $_GET["r"] == "-0.00") $r = (float)0.0;
@@ -40,18 +42,16 @@ if (!isset($_SESSION['responses'])) $_SESSION['responses']=array();
 $response = new Response($x, $y, $r, $currentTime);
 array_push($_SESSION['responses'],$response);
 
-//echo "<p align='left'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>"; //todo
-
 $time=(float)round(microtime(true)-$start,4);
 if ($time==0) $time='Менее 0.0001 c';
 
-echo "<p align='left' class='response-content' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>";
+echo "<p align='right' class='response-content' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>";
 echo "<p align='left' class='response-content'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>";
-echo "<p align='left' class='response-content'>Время проверки: ".$time." сек.</p>"; //lasttodo
+echo "<p align='left' class='response-content'>Время проверки: ".$time." сек.</p>";
 
 $response->setTime($time);
 echo
-"<table>
+"<table class='block' id='responsesTable'> 
 <thead>
 <tr >
 <th> <h2>Х</h2></th>
@@ -109,12 +109,9 @@ class Response{
 }
 ?>
 
-
 </body>
 
 </html>
-
-<!--todo пофиксить запятую в числах-->
 
 
 

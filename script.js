@@ -1,90 +1,93 @@
-(function() {
+(function a() {
 
 
-    const ACCEPTED_XS = [-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2];
+    const xDefaultValues = [-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2];
 
-    let errMsgPanel = document.getElementById('errors-area');
-    let submitButton = document.getElementById('submit-button');
-    let xCheckBoxes = document.querySelectorAll('input[name="x"]');
+    let errorsArea = document.getElementById("errors-area");
+    let submitButton = document.getElementById("submit-button");
+    let xCheckBoxes = document.querySelectorAll("input[name='x']");
     let yText = document.getElementById("y");
     let rText = document.getElementById("r");
 
     submitButton.addEventListener("click", onSubmit);
 
-    function setErrorMsg(msg) {
-        errMsgPanel.innerText = msg;
-        if (msg != null)
-            errMsgPanel.classList.remove("invisible");
-        else
-            errMsgPanel.classList.add("invisible");
-    }
+    let errorsText = "";
 
     function onSubmit(event) {
-        if (!(checkX() && checkY() && checkR()))
+        if (!check()) {
             event.preventDefault();
+            errorsArea.innerText = errorsText;
+            if (errorsText != null)
+                errorsArea.classList.remove("invisible");
+            else
+                errorsArea.classList.add("invisible");
+
+            errorsText = "";
+        }
     }
 
-    function checkX() {
+    function check() {
+        //checking x
         let selected = null;
         for (let i = 0; i < xCheckBoxes.length; i++) {
             if (xCheckBoxes[i].checked) {
                 if (selected) {
-                    setErrorMsg("Следует выбрать один X");
-                    return false;
+                    errorsText += "Следует выбрать\n одно значение X\n";
                 }
 
-                if (ACCEPTED_XS.indexOf(+xCheckBoxes[i].value) === -1)   {
-                    setErrorMsg("HACKING ATTEMPT");
-                    return false;
+                if (xDefaultValues.indexOf(+xCheckBoxes[i].value) === -1)   {
+                    errorsText += "Уважаемые хакеры! Не стоит ломать это,\n оно прекрасно сломается " +
+                        "и без Вашего участия.\n Спасибо!\n";
                 }
 
                 selected = xCheckBoxes[i].value;
             }
         }
         if (!selected) {
-            setErrorMsg("Следует выбрать X");
-            return false;
+            errorsText += "Следует выбрать X\n";
         }
-        return true;
-    }
 
-    function checkY() {
+        //checking y
         yText.value = yText.value.trim();
 
         if (yText.value.length === 0) {
-            setErrorMsg("Поле Y обязательно");
-            return false;
+            errorsText += "Поле Y обязательно\n";
         }
-
-        if (isNaN(yText.value.replace(',', '.'))) {
-            setErrorMsg("В поле Y следует ввести число");
-            return false;
+        if (yText.value.length >= 10) {
+            errorsText += "Значение координаты \nY некорректно\n";
+        }
+        let yTextValue = yText.value.replace(',', '.');
+        if (isNaN(yTextValue)) {
+            errorsText += "В поле Y следует\n ввести число\n";
         }
         let val = +yText.value;
         if (val <= -5 || val >= 3) {
-            setErrorMsg(`Y должен лежать в (-5 ; 3)`);
-            return false;
+            errorsText += 'Y должен лежать в (-5 ; 3)\n';
         }
-        return true;
-    }
 
-    function checkR() {
+        //checking r
         rText.value = rText.value.trim();
 
         if (rText.value.length === 0) {
-            setErrorMsg("Поле R обязательно");
-            return false;
+            errorsText += "Поле R обязательно\n";
+        }
+        if (rText.value.length >= 10) {
+            errorsText += "Значение радиуса\n R некорректно\n";
         }
 
-        if (isNaN(rText.value.replace(',', '.'))) {
-            setErrorMsg("В поле R следует ввести число");
-            return false;
+        let rTextValue = rText.value.replace(',', '.');
+        if (isNaN(rTextValue)) {
+            errorsText += "В поле R следует\n ввести число\n";
         }
-        let val = +rText.value;
-        if (val <= 1 || val >= 4) {
-            setErrorMsg(`R должен лежать в (1 ; 4)`);
-            return false;
+        let v = +rText.value;
+        if (v <= 1 || v >= 4) {
+            errorsText += 'R должен лежать в (1 ; 4)';
         }
+        if (errorsText !== "")
+            return false;
         return true;
+
     }
+
+
 })();
