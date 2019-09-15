@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-size: 1.5rem;
+    background-color: #575757;
+    color: floralwhite;
+    font-family: "Courier New", "Nimbus Mono L" , monospace;
+}
+
+.container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header{
+    font-family: "Courier New", fantasy;
+    background-color: #4c4646;
+    background-size: 50px 50px;
+    background-image:
+            linear-gradient(-45deg, transparent 52%, rgba(211, 211, 211, 0.9) 54%, transparent 55%, transparent),
+            linear-gradient(45deg, transparent 52%, rgba(154, 154, 154, 0.6) 54%, transparent 55%, transparent),
+            linear-gradient(-45deg, transparent 50%, rgba(0,0,0,0.1) 52%, transparent 53%, transparent),
+            linear-gradient(45deg, transparent 50%, rgba(0,0,0,0.05) 52%, transparent 53%, transparent);
+    margin: 0;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.left, .right {
+    float: left;
+    width: 50%;
+}
+
+
+.right {
+    font-weight: bold;
+    text-align: right;
+}
+
+/*основное*/
+section {
+    font-family: "Courier New", "Nimbus Mono L" , monospace;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+.control-points {
+    background-color: #252020;
+    margin-top: 10px;
+    border: 1px outset #d6d6b1;
+    border-radius: 5px;
+}
+
+.content-container {
+    display: flex;
+    padding-top: 100px;
+    flex-direction: row-reverse;
+}
+
+.block{
+    background: radial-gradient(circle, #575151, black);
+    margin: 15px;
+    padding: 10px;
+    width: auto;
+    align-items: center;
+    box-shadow: 0.4em 0.4em 5px rgba(155, 155, 155, 0.5);
+}
+
+button{
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-size: large;
+    margin: 2rem;
+}
+
+button:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+}
+
+button:active {
+    background: rgb(240, 240, 240);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .4);
+}
+
+.region {
+    border-radius: 10px;
+    border: 1px outset #999975;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+#xInput{
+    height: 250px;
+}
+
+#yInput, #radiusInput {
+    /*background: radial-gradient(circle, black, #575151);*/
+    background: radial-gradient(ellipse, #575151, black);
+}
+
+.graph {
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: white;
+    border: 1px outset #999975;
+    box-shadow: 0.4em 0.4em 5px rgba(169, 169, 169, 0.5);
+
+/*    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);*/
+}
+
+input {
+    padding: 1.5%;
+    margin: 0.1%;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    float: right;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: black;
+    padding: 5px 10px;
+}
+
+table.main {
+    text-align: left;
+    border-collapse: collapse;
+    border: 2px solid transparent;
+}
+
+table.main>th, td {
+    border: 2px solid transparent;
+}
+
+.invisible {
+    display: none;
+}
+
+#responsesTable td, th{
+    border: 2px solid #9b9b7d;
+}
+
+
+
+@media (max-width: 1080px) {
+    .container {
+        width: 700px;
+    }
+
+    .graph {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 550px;
+    }
+
+    .graph {
+        width: 350px;
+        height: 350px;
+        margin: 20px;
+    }
+}
