@@ -23,6 +23,19 @@ $yStr = (string)$_GET["y"];
 $a = str_replace(",", ".", $yStr);
 $y = (float)$a;
 
+$switchTheme = $_GET["switch-1"];
+$pr =  ($switchTheme === "on");
+if ((int)$pr === 1) {
+    echo "<script>
+         let head = document.head,
+         link = document.createElement('link');
+        link.rel = 'stylesheet';
+            link.href = 'stylesheet-dark.css'; 
+            document.getElementById('switch-1').setAttribute('checked', true); 
+          head.appendChild(link);
+    </script>";
+}
+
 $rStr = (string)$_GET["r"];
 $b = str_replace(",", ".", $rStr);
 $r = (float)$b;
@@ -45,7 +58,7 @@ $response = new Response($x, $y, $r, $currentTime);
 array_push($_SESSION['responses'],$response);
 
 $time=(float)round(microtime(true)-$start,4);
-if ($time==0) $time='Менее 0.0001 c';
+if ($time==0) $time='Менее 0.0001';
 
 echo "<p align='right' class='response-content' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>";
 echo "<p align='left' class='response-content'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>";
