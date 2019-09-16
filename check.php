@@ -23,6 +23,19 @@ $yStr = (string)$_GET["y"];
 $a = str_replace(",", ".", $yStr);
 $y = (float)$a;
 
+$switchTheme = $_GET["switch-1"];
+$pr =  ($switchTheme === "on");
+
+if ($pr==1) { echo "<script>
+
+let head = document.head, 
+    link1 = document.createElement('link');
+        link1.rel = 'stylesheet';
+        link1.href = 'stylesheet-dark.css';
+        head.appendChild(link1);
+</script>";}
+
+
 $rStr = (string)$_GET["r"];
 $b = str_replace(",", ".", $rStr);
 $r = (float)$b;
@@ -45,7 +58,7 @@ $response = new Response($x, $y, $r, $currentTime);
 array_push($_SESSION['responses'],$response);
 
 $time=(float)round(microtime(true)-$start,4);
-if ($time==0) $time='Менее 0.0001 c';
+if ($time==0) $time='Менее 0.0001';
 
 echo "<p align='right' class='response-content' id='time'> Сейчас ".date("H:i:s", $currentTime)."</p>";
 echo "<p align='left' class='response-content'> Точка ($x;$y) "; echo $response->check_area()? "":"не"; echo " входит в область с радиусом $r </p>";
@@ -82,8 +95,8 @@ echo "</table>";
 
 echo '<div id="responseFooter">
 <div class="switch" align="right" onclick="aaaaa()">
-    <input type="checkbox" align="right" id="switch-1" class="switch-check">
-    <label for="switch-1">сделать красиво?</label>
+    <input type="checkbox" align="right" id="switch-2" class="switch-check">
+    <label for="switch-2">сделать красиво?</label>
 </div>
 <div style="clear: left"></div>
 </div> ';
@@ -126,7 +139,7 @@ class Response{
         // проверяем значение из localStorage если dark то темная тема
         if (localStorage.getItem('themeStyle') === 'dark') {
             link.href = 'stylesheet-dark.css'; // ссылка на темный стиль
-            document.getElementById('switch-1').setAttribute('checked', true); // переключаем чекбокс в положение "темная тема"
+            document.getElementById('switch-2').setAttribute('checked', true); // переключаем чекбокс в положение "темная тема"
         }
         // по умолчанию светлая тема
         else {
@@ -136,7 +149,7 @@ class Response{
 
 
         // событие при переключении чекбокса
-        document.getElementById('switch-1').addEventListener('change', ev => {
+        document.getElementById('switch-2').addEventListener('change', ev => {
             let btn = ev.target;
             // если чекбокс включен
             if (btn.checked) {

@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b937fdb0-aee3-42ab-a8f3-1d26418f5aa6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/aaa-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aaaaaaaaaaaaaa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btn-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btn-2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/check.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet-light.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,13 +70,14 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\my\IFMO\пип\lab1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\my\IFMO\c2\web\lab1" />
       <recent name="D:\my\IFMO\пип\lab1" />
       <recent name="D:\my\IFMO\пип\lab1\localhost" />
       <recent name="D:\my\IFMO\пип\lab1\265061" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\my\IFMO\пип\lab1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,7 +230,9 @@
       <workItem from="1568448011177" duration="1620000" />
       <workItem from="1568498389803" duration="7351000" />
       <workItem from="1568541514163" duration="662000" />
-      <workItem from="1568544647529" duration="6849000" />
+      <workItem from="1568544647529" duration="9253000" />
+      <workItem from="1568630480265" duration="886000" />
+      <workItem from="1568635037238" duration="10128000" />
     </task>
     <servers />
   </component>
@@ -242,6 +251,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/check.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

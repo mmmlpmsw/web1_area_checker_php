@@ -59,8 +59,8 @@
 
         </svg>
         <form method="GET" action="check.php" target="graphics">
-            <div class="control-points">
-                <div class="block region" id="xInput">
+            <div class="control-points block region">
+                <div id="xInput">
                     <p class="title"><label title="X"> Значение X </label></p>
                     <table class="main">
                         <tr>
@@ -83,12 +83,12 @@
 
                 </div>
 
-                <div class="block region" id="yInput">
+                <div >
                     <p class="title"><label for="Y"> Значение Y </label></p>
                     <p><input class="input_Y" id="y" type="text" name="y" placeholder="(-5 .. 3)"><br></p>
                 </div>
 
-                <div class="block region" id="radiusInput">
+                <div >
                     <p class="title"><label for="R"> Значение R </label></p>
                     <p><input class="input_R" id="r" type="text" name="r" placeholder="(1 .. 4)"><br></p>
                 </div>
@@ -98,8 +98,12 @@
                 </div>
 
             </div>
-            <button class="region" type="submit" id="submit-button">IMMA_CHARGIN_MAH_LAZER</button>
+            <button  type="submit" id="submit-button"></button>
 
+            <div class="switch" align="right" onclick="aaaaa()">
+                <input type="checkbox" align="right" id="switch-1" name="switch-1" class="switch-check">
+                <label for="switch-1">сделать красиво?</label>
+            </div>
 
         </form>
     </div>
@@ -142,18 +146,7 @@
 </script>
 
 <footer >
-    <p class="info left">
-        Санкт-Петербург, 2019
-    </p>
-    <p class="info right">
-    <div class="switch" align="right" onclick="aaaaa()">
-        <input type="checkbox" align="right" id="switch-1" class="switch-check">
-        <label for="switch-1">сделать красиво?</label>
-    </div>
-
-    </p>
-    <div style="clear: left"></div>
-
+    Санкт-Петербург, 2019
 </footer>
 
 </body>

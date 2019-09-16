@@ -81,7 +81,7 @@
         }
         let v = +rText.value;
         if (v <= 1 || v >= 4) {
-            errorsText += 'R должен лежать в (1 ; 4)';
+            errorsText += 'R должен лежать\nв (1 ; 4)';
         }
         if (errorsText !== "")
             return false;
